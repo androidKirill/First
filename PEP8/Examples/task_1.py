@@ -17,6 +17,7 @@ class ExampleClass :
     self.name=name
 
 
+
     def display_info(self):
         print(f"Name: {self.name}   ")
 
