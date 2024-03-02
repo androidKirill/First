@@ -84,8 +84,8 @@ class AlgoAnalytics(MainAlgo):
         self.result = self.data[:]
         self.result = str(len(self.data)) + self.result
         self.result = self.result[:len(self.result) // 2 + 1] \
-                      + str(len(self.data.split())) \
-                      + self.result[len(self.result) // 2 + 1:]
+            + str(len(self.data.split())) \
+            + self.result[len(self.result) // 2 + 1:]
         avg = 0
         for word in self.data.split():
             avg += len(word)

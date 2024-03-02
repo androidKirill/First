@@ -19,6 +19,7 @@ class CalculatorTest(TestCase):
     fixtures = [
         'test_database.json'
     ]
+
     def setUp(self) -> None:
         self.client = Client()
         self.user = User.objects.get(username='vasya')
@@ -35,13 +36,16 @@ class CalculatorTest(TestCase):
         self.assertTrue('form' in self.response.context)
 
     def test_invalid_post(self):
-        response = self.client.post(reverse('calc_url'), {'first': 'ahaha', 'second': 'ehehe'})
+        response = self.client.post(
+            reverse('calc_url'), {'first': 'ahaha', 'second': 'ehehe'})
         self.assertEqual(response.status_code, 200)
         self.assertGreater(len(response.context['form'].errors), 0)
-        self.assertFormError(response, 'form', 'first', 'Enter a whole number.')
+        self.assertFormError(response, 'form', 'first',
+                             'Enter a whole number.')
 
     def test_normal_post(self):
-        response = self.client.post(reverse('calc_url'), {'first': '1', 'second': '2'})
+        response = self.client.post(
+            reverse('calc_url'), {'first': '1', 'second': '2'})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.context['first_value'], '1')
         self.assertEqual(response.context['second_value'], '2')

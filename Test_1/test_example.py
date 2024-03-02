@@ -20,6 +20,7 @@ class SquareEqSolverTestCase(unittest.TestCase):
         # real_res = square_eq_solver("-1", "ку-ку", 12)
         # self.assertEqual(real_res, estimated_res)
         self.assertRaises(ValueError, square_eq_solver, "-1", "ку-ку", 12)
+
     def test_no_exists(self):
         self.assertRaises(RuntimeError, square_eq_solver, 0, 0, 0)
 
@@ -27,6 +28,7 @@ class SquareEqSolverTestCase(unittest.TestCase):
         estimated_res = [2.0]
         real_res = square_eq_solver(1, -4, 4)
         self.assertEqual(real_res, estimated_res)
+
 
 def square_eq_solver(a, b, c):
     """Поиск решений квадратного уравнения a*x**2 + b*x + c = 0

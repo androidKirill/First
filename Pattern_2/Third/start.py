@@ -110,7 +110,8 @@ class Panzer(PGObject):
         # Отрисовка
         self.rect.x = self.x - self.rect.width // 2
         self.rect.y = self.y - self.rect.height // 2
-        self.rotated_rect = self.rotated_image.get_rect(center=self.rect.center)
+        self.rotated_rect = self.rotated_image.get_rect(
+            center=self.rect.center)
         self.screen.blit(self.rotated_image, self.rotated_rect)
 
     def move(self):
@@ -127,8 +128,10 @@ class Panzer(PGObject):
 
     def rotate(self, angle):
         self.direction += angle
-        self.rotated_image = pygame.transform.rotate(self.image, -self.direction / pi * 180)
-        self.rotated_rect = self.rotated_image.get_rect(center=self.rect.center)
+        self.rotated_image = pygame.transform.rotate(
+            self.image, -self.direction / pi * 180)
+        self.rotated_rect = self.rotated_image.get_rect(
+            center=self.rect.center)
 
     def logic(self):
         self.step()

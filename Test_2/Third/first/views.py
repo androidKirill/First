@@ -55,7 +55,8 @@ def calc(request):
             a = f.data['first']
             b = f.data['second']
             c = int(a) + int(b)
-            record = CalcHistory(date=datetime.datetime.now(), first=a, second=b, result=c, author=user)
+            record = CalcHistory(date=datetime.datetime.now(
+            ), first=a, second=b, result=c, author=user)
             record.save()
             context.update({
                 'first_value': a,

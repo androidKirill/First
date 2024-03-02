@@ -56,7 +56,8 @@ class BaseEquationSolver:
                     new_d = d - e
                     # BRUTEFORSE
                     while x < 10 ** 6:
-                        r = math.fabs(a * x * x * x + b * x * x + c * x + new_d)
+                        r = math.fabs(a * x * x * x + b *
+                                      x * x + c * x + new_d)
                         if (r <= 10 ** -6):
                             res.append(x)
                         x = x + step

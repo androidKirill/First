@@ -34,7 +34,8 @@ class DeleteCommand(Command):
         self.deleted_text = None
 
     def execute(self):
-        self.deleted_text = self.editor.get_text()[self.position:self.position + self.length]
+        self.deleted_text = self.editor.get_text(
+        )[self.position:self.position + self.length]
         self.editor.delete_text(self.position, self.length)
 
     def undo(self):

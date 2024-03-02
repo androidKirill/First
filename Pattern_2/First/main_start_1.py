@@ -58,6 +58,7 @@ class Section:
     def __str__(self):
         return self.color if self.enabled else None
 
+
 class TrafficLight:
     def __init__(self):
         self.sections = [
@@ -79,6 +80,7 @@ class TrafficLight:
 
     def __str__(self):
         return "-".join([str(state) for state in self.sections if state.enabled])
+
 
 def main():
     tr = TrafficLight()

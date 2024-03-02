@@ -2,15 +2,18 @@ from django.contrib.auth.models import User
 from django.test import TestCase, Client
 from django.urls import reverse
 
+
 class IndexTest(TestCase):
     def setUp(self) -> None:
         self.client = Client()
         self.response = self.client.get(reverse("index_url"))
+
     def test_index_response(self):
         self.assertEqual(self.response.status_code, 200)
 
     def test_simple_context(self):
         self.assertEqual(self.response.context["pages"], 1)
+
 
 class CalcTest(TestCase):
     fixtures = [
@@ -33,8 +36,9 @@ class CalcTest(TestCase):
         self.assertTrue('form' in self.response.context)
 
     def test_invalid_post(self):
-        response = self.client.post(reverse('calc_url'), {'first': 'ahaha', 'second': 'ehehe'})
+        response = self.client.post(
+            reverse('calc_url'), {'first': 'ahaha', 'second': 'ehehe'})
         self.assertEqual(response.status_code, 200)
         self.assertGreater(len(response.context['form'].errors), 0)
-        self.assertFormError(response, 'form', 'first', 'Enter a whole number.')
-
+        self.assertFormError(response, 'form', 'first',
+                             'Enter a whole number.')

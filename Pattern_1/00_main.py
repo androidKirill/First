@@ -41,7 +41,7 @@ def process_file(input_filename: str, mode: str) -> None:
 def process_data(data: str, mode: str) -> str:
     """
     Преобразование данных, записанных в файле
-    
+
     По указанному mode'у выбирается алгоритм и
     на основе его выполняется преобразование.
 

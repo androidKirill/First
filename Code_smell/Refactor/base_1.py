@@ -35,7 +35,8 @@ class BaseEquationSolver:
         new_d = self.d - self.e
 
         while x < 10 ** 6:  # BRUTEFORCE
-            r = math.fabs(self.a * x ** 3 + self.b * x ** 2 + self.c * x + new_d)
+            r = math.fabs(self.a * x ** 3 + self.b *
+                          x ** 2 + self.c * x + new_d)
             if r <= 10 ** -6:
                 self.result.append(x)
             x = x + step
