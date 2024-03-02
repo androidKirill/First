@@ -14,7 +14,7 @@ for i in range(5):
     print(i)
 
 
-class E:
+class ExampleClass:
     def __init__(self, name):
         self.name = name
 
@@ -22,6 +22,5 @@ class E:
             print(f"Name: {self.name}   ")
 
 
-obj = E("example")
+obj = ExampleClass("example")
 obj.display_info()
-
