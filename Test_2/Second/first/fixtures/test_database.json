@@ -1,0 +1,64 @@
+[
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$390000$4DteEkkcQmsZXKAR9G4dc1$CNxzfCEltiImHHeNSaraTca4i5M4ugfUUohvIjreTN4=",
+        "last_login": "2023-04-01T04:30:39.378Z",
+        "is_superuser": true,
+        "username": "vasya",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2023-04-01T04:30:07.658Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "first.calchistory",
+    "pk": 35,
+    "fields": {
+        "date": "2023-04-01T04:35:15.271Z",
+        "first": 1,
+        "second": 2,
+        "result": 3,
+        "author": 5
+    }
+},
+{
+    "model": "first.calchistory",
+    "pk": 36,
+    "fields": {
+        "date": "2023-04-01T04:45:06.949Z",
+        "first": 1,
+        "second": 2,
+        "result": 3,
+        "author": 5
+    }
+},
+{
+    "model": "first.calchistory",
+    "pk": 37,
+    "fields": {
+        "date": "2023-04-01T04:45:30.817Z",
+        "first": 1,
+        "second": 2,
+        "result": 3,
+        "author": 5
+    }
+},
+{
+    "model": "first.calchistory",
+    "pk": 38,
+    "fields": {
+        "date": "2023-04-01T04:45:42.372Z",
+        "first": 3,
+        "second": 3,
+        "result": 6,
+        "author": 5
+    }
+}
+]
