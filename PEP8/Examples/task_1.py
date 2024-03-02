@@ -24,3 +24,4 @@ class E:
 
 obj = E("example")
 obj.display_info()
+
